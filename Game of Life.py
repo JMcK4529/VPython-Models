@@ -1,6 +1,5 @@
 from vpython import *
 import numpy as np
-import time
 # In 1D -> a cell has N1 = 2    = -1 + 3**(1)       -> [w,x,y,z]    = [1,1,1,1]     -> living cells need 1 <= n <= 1 to stay alive, dead cells need 1 <= n <= 1 to become alive.
 # In 2D -> a cell has N2 = 8    = -1 + 3**(2/1)     -> [w,x,y,z]    = [2,3,3,3]     -> living cells need 2 <= n <= 3 to stay alive, dead cells need 3 <= n <= 3 to become alive.
 # In 3D -> a cell has N3 = 26   = -1 + 9**(3/2)     -> [w,x,y,z]    = [2,5,5,5]     -> living cells need 2 <= n <= 5 to stay alive, dead cells need 5 <= n <= 5 to become alive.
@@ -34,7 +33,6 @@ class GameOfLife:
             # Loop to play the game
             while True:
                 rate(10)
-                #time.sleep(1)
 
                 # Move to the next state of the game
                 self.next()

@@ -1,6 +1,5 @@
 from vpython import *
 import numpy.random as npr
-import time
 
 class Particle:
     def __init__(self,pos,r,vel,q):
